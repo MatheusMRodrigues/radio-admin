@@ -16,7 +16,10 @@ const routes = [
   {
     path: "/auth",
     component: () => import("layouts/AuthLayout.vue"),
-    children: [{ path: "", component: () => import("pages/AuthPage.vue") }],
+    children: [
+      { path: "", component: () => import("pages/AuthPage.vue") },
+      { path: "blocked", component: () => import("pages/Blocked.vue") },
+    ],
   },
 
   // Always leave this as last one,
